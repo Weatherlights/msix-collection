@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap uap2 uap3 rescap rescap3" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3">
+  <Identity Name="HaukeGtze.Diapoweredbyweatherlights.com" ProcessorArchitecture="x86" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.972.1.0"/>
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->
+  <Resources>
+    <Resource Language="de-DE"/>
+    <Resource uap:Scale="100"/>
+    <Resource Language="en-US"/>
+    <Resource uap:Scale="400"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>ms-resource:PublisherDisplayName</PublisherDisplayName>
+    <DisplayName>Dia powered by weatherlights.com</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="dia.exe" Id="diaw.exe">
+      <uap:VisualElements BackgroundColor="transparent" Description="ms-resource:VisualElements.Description" DisplayName="ms-resource:VisualElements.DisplayName" Square150x150Logo="Assets\diaw.exeSquare150x150Logo.png" Square44x44Logo="Assets\diaw.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\diaw.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="dia.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Dia\diaw.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Dia\diaw.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="diafileopen.exe">
+          <uap:FileTypeAssociation Name=".dia">
+            <uap:DisplayName>ms-resource:DisplayName_1</uap:DisplayName>
+            <uap:Logo>img\Diagram.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/dia">.dia</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="createcgm" Parameters="-t cgm &quot;%1&quot; -e &quot;[CHANGEEXTENSION|%1|cgm]&quot;">ms-resource:Verb</uap3:Verb>
+              <uap3:Verb Id="createdxf" Parameters="-t -dxf &quot;%1&quot; -e [CHANGEEXTENSION|%1|dxf]&quot;">ms-resource:Verb_1</uap3:Verb>
+              <uap3:Verb Id="createeps" Parameters="-t eps &quot;%1&quot; -e [CHANGEEXTENSION|%1|eps]&quot;">ms-resource:Verb_2</uap3:Verb>
+              <uap3:Verb Id="createfig" Parameters="-t fig &quot;%1&quot; -e [CHANGEEXTENSION|%1|fig]&quot;">ms-resource:Verb_3</uap3:Verb>
+              <uap3:Verb Id="createhpgl" Parameters="-t hpgl &quot;%1&quot; -e [CHANGEEXTENSION|%1|hpgl]&quot;">ms-resource:Verb_4</uap3:Verb>
+              <uap3:Verb Id="createmp" Parameters="-t mp &quot;%1&quot; -e [CHANGEEXTENSION|%1|mp]&quot;">ms-resource:Verb_5</uap3:Verb>
+              <uap3:Verb Id="createpng" Parameters="-t png &quot;%1&quot; -e [CHANGEEXTENSION|%1|png]&quot;">ms-resource:Verb_6</uap3:Verb>
+              <uap3:Verb Id="createshape" Parameters="-t shape &quot;%1&quot; -e [CHANGEEXTENSION|%1|shape]&quot;">ms-resource:Verb_7</uap3:Verb>
+              <uap3:Verb Id="createsvg" Parameters="-t svg &quot;%1&quot; -e [CHANGEEXTENSION|%1|svg]&quot;">ms-resource:Verb_8</uap3:Verb>
+              <uap3:Verb Id="createtex" Parameters="-t tex &quot;%1&quot; -e [CHANGEEXTENSION|%1|tex]&quot;">ms-resource:Verb_9</uap3:Verb>
+              <uap3:Verb Id="createwmf" Parameters="-t wmf &quot;%1&quot; -e [CHANGEEXTENSION|%1|wmf]&quot;">ms-resource:Verb_10</uap3:Verb>
+              <uap3:Verb Id="createwpg" Parameters="-t wpg &quot;%1&quot; -e [CHANGEEXTENSION|%1|wpg]&quot;">ms-resource:Verb_11</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="AdvancedInstaller" Version="16.5 (8df7ad95)"/>
+    <build:Item Name="ProjectLicenseType" Version="express"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

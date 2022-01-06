@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap uap5 rescap rescap3 desktop desktop4" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4">
+  <Identity Name="HaukeGtze.PuTTYSSHClient" ProcessorArchitecture="x64" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.76.1.0"/>
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource Language="en-US"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>PuTTY SSH Client</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="putty_.exe" Id="putty.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" Description="putty.exe" DisplayName="PuTTY" Square150x150Logo="Assets\putty.exeSquare150x150Logo.png" Square44x44Logo="Assets\putty.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\putty.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="putty_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\putty.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\putty.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="putty.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="putty.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="puttygen_.exe" Id="puttygen.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" Description="puttygen.exe" DisplayName="PuTTY Key Generator" Square150x150Logo="Assets\puttygen.exeSquare150x150Logo.png" Square44x44Logo="Assets\puttygen.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\puttygen.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="puttygen_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\puttygen.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\puttygen.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="puttygen.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="puttygen.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="pageant_.exe" Id="pageant.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" Description="pageant.exe" DisplayName="PuTTY Authentication Agent" Square150x150Logo="Assets\pageant.exeSquare150x150Logo.png" Square44x44Logo="Assets\pageant.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\pageant.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="pageant_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\pageant.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\pageant.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="pageant.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="pageant.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pageant_.exe">
+          <uap:FileTypeAssociation Name=".ppk">
+            <uap:DisplayName>PuTTY Private Key File</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ppk</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="psftp.exe" Id="psftp.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" Description="psftp.exe" DisplayName="PSFTP" Square150x150Logo="Assets\psftp.exeSquare150x150Logo.png" Square44x44Logo="Assets\psftp.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\psftp.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="psftp.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\psftp.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\PuTTY (Unofficial)\psftp.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="psftp.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="psftp.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="pscp.exe" Id="pscp.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" AppListEntry="default" Description="Command-line SCP/SFTP client" DisplayName="PSCP" Square150x150Logo="Assets\pscp.exeSquare150x150Logo.png" Square44x44Logo="Assets\pscp.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\pscp.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="pscp.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="pscp.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="plink.exe" Id="plink.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#ffffff" AppListEntry="default" Description="Command-line SSH, Telnet, and Rlogin client" DisplayName="plink" Square150x150Logo="Assets\plink.exeSquare150x150Logo.png" Square44x44Logo="Assets\plink.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\plink.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="plink.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="plink.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="AdvancedInstaller" Version="16.5 (8df7ad95)"/>
+    <build:Item Name="ProjectLicenseType" Version="express"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

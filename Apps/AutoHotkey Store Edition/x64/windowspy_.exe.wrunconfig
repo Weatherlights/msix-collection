@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- weatherlights.com MSIX Wrapper
+(c) 2020 by Hauke Goetze.
+You may use it freely in relation to this package and project. If you need help with it just contact hauke@hauke.us
+-->
+<!-- This is used to run the WindowSpy.ahk file when the start menu shortcut is selected -->
+<config>
+  <Process>
+    <Filename>[APPDIR]\AutoHotkey.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>"[APPDIR]\WindowSpy.ahk"</Arguments>
+  </Process>
+</config>

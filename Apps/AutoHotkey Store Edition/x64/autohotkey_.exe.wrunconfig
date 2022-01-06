@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- weatherlights.com MSIX Wrapper
+(c) 2020 by Hauke Goetze.
+You may use it freely in relation to this package and project. If you need help with it just contact hauke@hauke.us
+-->
+<!-- This is used to run the help file (What happens if you start AutoHotkey from Startmenu) -->
+<config>
+  <Process>
+    <Filename>[APPDIR]\hh.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>"[APPDIR]\AutoHotkey.chm"</Arguments>
+  </Process>
+</config>

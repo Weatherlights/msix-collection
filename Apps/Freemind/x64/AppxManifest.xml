@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap rescap rescap3 uap6" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="HaukeGtze.FreeMindpoweredbyweatherlights.com" ProcessorArchitecture="x64" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.101.3.0" />
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->
+  <Resources>
+    <Resource uap:Scale="100" />
+    <Resource Language="en-US" />
+    <Resource uap:Scale="150" />
+    <Resource uap:Scale="200" />
+    <Resource Language="de-DE" />
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>ms-resource:PublisherDisplayName</PublisherDisplayName>
+    <DisplayName>ms-resource:DisplayName</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="FreeMind_.exe" Id="java.exe">
+      <uap:VisualElements BackgroundColor="transparent" Description="ms-resource:VisualElements.Description" DisplayName="ms-resource:VisualElements.DisplayName" Square150x150Logo="Assets\java.exeSquare150x150Logo.png" Square44x44Logo="Assets\java.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\java.exeSquare71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="FreeMind_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\FreeMind powered by weatherlights.com\java.exe.lnk" />
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\FreeMind powered by weatherlights.com\java.exe.lnk" />
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="FreeMind_.exe">
+          <uap:FileTypeAssociation Name=".mm">
+            <uap:DisplayName>ms-resource:DisplayName_1</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false" />
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop" />
+  </Dependencies>
+  <Extensions>
+    <uap6:Extension Category="windows.loaderSearchPathOverride">
+      <uap6:LoaderSearchPathOverride>
+        <uap6:LoaderSearchPathEntry FolderPath="bin" />
+      </uap6:LoaderSearchPathOverride>
+    </uap6:Extension>
+  </Extensions>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530" />
+    <build:Item Name="weatherlights.comWrapper" Version="4" />
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1" />
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1" />
+  </build:Metadata>
+  <mp:PhoneIdentity PhoneProductId="9b89e881-e166-49ae-b8c8-819f95153b26" PhonePublisherId="e1da3dd1-b49e-434e-92f9-889385a3613c" />
+</Package>

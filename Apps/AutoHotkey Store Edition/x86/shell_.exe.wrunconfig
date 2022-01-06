@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- weatherlights.com MSIX Wrapper
+(c) 2020 by Hauke Goetze.
+You may use it freely in relation to this package and project. If you need help with it just contact hauke@hauke.us
+-->
+<!-- This is used to run the WindowSpy.ahk file when the start menu shortcut is selected -->
+<!-- This is used to select the right exe file when the context menu is used. 
+MSIX does only allow one EXE file to be associated with a file type this is why
+this wrapper is used to select the correct exe file.
+-->
+<config>
+  <Process>
+    <ArgsSelector>Compile</ArgsSelector>
+    <Filename>[APPDIR]\Compiler\Ahk2Exe.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>[RESOLVED_ARGS]</Arguments>
+  </Process>
+  <Process>
+    <ArgsSelector>Edit</ArgsSelector>
+    <Filename>notepad.exe</Filename>
+    <WorkingDirectory>[USERPROFILE]</WorkingDirectory>
+    <Arguments>[RESOLVED_ARGS]</Arguments>
+  </Process>
+  <Process>
+    <ArgsSelector>Open</ArgsSelector>
+    <Filename>[APPDIR]\AutoHotkey.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>[RESOLVED_ARGS]</Arguments>
+  </Process>
+  <Process>
+    <ArgsSelector>OpenA</ArgsSelector>
+    <Filename>[APPDIR]\AutoHotkeyA32.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>[RESOLVED_ARGS]</Arguments>
+  </Process>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Process>
+    <Filename>[APPDIR]\bin\javaw.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>-Xmx256M -Xss8M -Dlog4j2.formatMsgNoLookups=True -Duser.home="[APPDATA]" -cp "lib\freemind.jar;lib\commons-lang-2.0.jar;lib\forms-1.0.5.jar;lib\jibx\jibx-run.jar;lib\jibx\xpp3.jar;lib\bindings.jar;lib\xalan.jar;lib\serializer.jar;lib\xml-apis.jar;lib\xercesImpl.jar;lib\jortho.jar" freemind.main.FreeMindStarter [ARGS]</Arguments>
+  </Process>
+</config>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Copyright (c) 2020 Hauke Götze <hauke@hauke.us>
+All rights reserved. Use of the code is allowed under the 
+GNU GPLv2 terms, as specified in the LICENSE file
+distributed with this code, or available from
+http://www.opensource.org/licenses/artistic-license-2.0.php
+
+This file is used to create an MSIX/APPX package to install
+AutoHotkey as an Universal Windows Plattform application.
+To build the package you require the Windows 10 SDK available
+from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
+ -->
+<Package IgnorableNamespaces="build uap uap2 uap3 uap4 rescap rescap3 desktop desktop4" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4">
+<!--
+  Change the Identity according to your needs or as required by Microsoft if you intend to publish your build.
+  For internal publishing the Publisher should match the subject of your code signing certificate.
+-->  
+  <Identity
+    Name="HaukeGtze.AutoHotkeypoweredbyweatherlights.com"
+    ProcessorArchitecture="x86"
+    Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414"
+    Version="1.1133.103.0"/>
+  <!-- Publisher for Testing: CN=Hauke Gotze, OU=weatherlights.com, O=Hauke Gotze, S=Schleswig-Holstein, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->  
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource Language="en-us"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>AutoHotkey powered by weatherlights.com</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+  <!-- The main shortcut just opens the documentation from the website (instead of running AutoHotkey.exe). This is needed since CHM files will not run on Windows 10 in S-Mode. -->
+    <Application Executable="autohotkey_.exe" EntryPoint="Windows.FullTrustApplication" Id="AutoHotkey.exe" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#418c41" Description="Get started with AutoHotkey" DisplayName="AutoHotkey" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile ShortName="AutoHotkey" Square71x71Logo="Assets\AutoHotkey.exeSquare71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkey.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\AutoHotkey.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\AutoHotkey.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%USERPROFILE%\Desktop\AutoHotkey.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <!-- Associate AutoHotkey with ahk file files -->
+        <uap3:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="shell_.exe">
+          <uap3:FileTypeAssociation Name=".ahk">
+            <uap:DisplayName>AutoHotkey Script</uap:DisplayName>
+            <uap:Logo>IMG\AHScript.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType uap4:ShellNewFileName="Template.ahk">.ahk</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap2:SupportedVerbs>
+            <!-- The ARGSSELECTOR is consumed by the shell_.exe file which selects the correct exe file within the package. Please check the shell_.exe.wrunconfig file for further information -->
+              <uap3:Verb Id="Open" Parameters="[ARGSSELECTOR|Open]&quot;%1&quot; %*">Run Script</uap3:Verb><!-- Run with autohotkey.exe -->
+              <uap3:Verb Id="OpenA" Parameters="[ARGSSELECTOR|OpenA]&quot;%1&quot; %*">Run Script (ANSI)</uap3:Verb><!-- Run with autohotkeyA32.exe -->
+              <uap3:Verb Id="compile" Parameters="[ARGSSELECTOR|Compile]/in &quot;%l&quot;">Compile Script</uap3:Verb><!-- Run with Ahk2exe.exe -->
+              <uap3:Verb Id="edit" Parameters="[ARGSSELECTOR|Edit]%1">Edit Script</uap3:Verb><!-- Run with Notepad -->
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkey.exe">
+          <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="AutoHotkey.exe"/>
+          </uap3:AppExecutionAlias>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="Compiler\Ahk2Exe.exe" Id="Ahk2Exe.exe" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#418c41" Description="Convert an AutoHotkey Script (.ahk) to an executable binary file (.exe)" DisplayName="Convert .ahk to .exe" Square150x150Logo="Assets\Ahk2Exe.exeSquare150x150Logo.png" Square44x44Logo="Assets\Ahk2Exe.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile ShortName=".ahk to .exe" Square71x71Logo="Assets\Ahk2Exe.exeSquare71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="Compiler\Ahk2Exe.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\Ahk2Exe.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\Ahk2Exe.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap3:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="Compiler\Ahk2Exe.exe">
+          <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="Ahk2Exe.exe"/>
+          </uap3:AppExecutionAlias>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <!-- WindowSpy is an AHK file which is run by the Autohotkey.exe file. Since arguments are not supported within MSIX the windowspy_.exe wrapper runs the Autohotkey.exe with WindowsSpy.ahk file as the first argument. Check the windowspy_.exe.wronconfig file for further details -->
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="windowspy_.exe" Id="AutoHotkey.exe1" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#418c41" Description="Starts Window Spy" DisplayName="Window Spy" Square150x150Logo="Assets\AutoHotkey.exe1Square150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exe1Square44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile ShortName="Window Spy" Square71x71Logo="Assets\AutoHotkey.exe1Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+    </Application>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkeyA32_.exe" Id="AutoHotkeyA32.exe" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="#418c41" Description="Get started with AutoHotkey ANSI. Run AutoHotkeyA32.exe from the command prompt." DisplayName="AutoHotkey (ANSI)" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile ShortName="AutoHotkey (64-bit)" Square71x71Logo="Assets\AutoHotkey.exeSquare71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkeyA32_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\AutoHotkeyA32.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\AutoHotkey powered by weatherlights.com\AutoHotkeyA32.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap3:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkeyA32.exe">
+          <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="AutoHotkeyA32.exe"/>
+          </uap3:AppExecutionAlias>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.718"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

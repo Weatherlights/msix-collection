@@ -1,0 +1,1 @@
+Notice: You need to compile KeePass.exe on your own since and make sure you remove the mechanism that prevents the startup when the exe is started within an MSIX/APPX package.

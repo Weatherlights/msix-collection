@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" IgnorableNamespaces="build uap rescap rescap3" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3">
+  <Identity Name="HaukeHasselberg.KeePass2" ProcessorArchitecture="x86" Publisher="CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE" Version="1.0.0.0"/>
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource Language="de-DE"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>KeePass 2</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="KeePass.exe" Id="KeePass.exe">
+      <uap:VisualElements BackgroundColor="transparent" Description="KeePass.exe" DisplayName="KeePass.exe" Square150x150Logo="Assets\KeePass.exeSquare150x150Logo.png" Square44x44Logo="Assets\KeePass.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="KeePass.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\KeePass 2\KeePass.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\KeePass 2\KeePass.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="AdvancedInstaller" Version="16.5 (8df7ad95)"/>
+    <build:Item Name="ProjectLicenseType" Version="express"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

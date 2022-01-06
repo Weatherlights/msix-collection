@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap uap5 rescap rescap3 desktop desktop4 com desktop9" xmlns:desktop9="http://schemas.microsoft.com/appx/manifest/desktop/windows10/9" xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4">
+  <Identity Name="HaukeGtze.7-ZipFileManagerUnofficial" ProcessorArchitecture="x86" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.2107.2.0"/>
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->  
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource Language="en-US"/>
+    <Resource uap:Scale="400"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>7-Zip File Manager (Unofficial)</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe" Id="zFM.exe" desktop4:Subsystem="console" desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements BackgroundColor="transparent" Description="7zFM.exe" DisplayName="7-Zip File Manager" Square150x150Logo="Assets\zFM.exeSquare150x150Logo.png" Square44x44Logo="Assets\zFM.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\zFM.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\7-Zip\7zFM.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\7-Zip\7zFM.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".7z">
+            <uap:DisplayName>7-Zip File</uap:DisplayName>
+            <uap:Logo>Img\7zip.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.7z</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".zip">
+            <uap:DisplayName>Zip-File</uap:DisplayName>
+            <uap:Logo>Img\zip.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.zip</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".rar">
+            <uap:DisplayName>RAR-Archive</uap:DisplayName>
+            <uap:Logo>Img\rar.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rar</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".001">
+            <uap:DisplayName>001 File</uap:DisplayName>
+            <uap:Logo>Img\001.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.001</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".cab">
+            <uap:DisplayName>Cabinet File</uap:DisplayName>
+            <uap:Logo>Img\cab.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.cab</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".iso">
+            <uap:DisplayName>ISO-File</uap:DisplayName>
+            <uap:Logo>Img\iso.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.iso</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".xz">
+            <uap:DisplayName>XZ File</uap:DisplayName>
+            <uap:Logo>Img\xz.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/x-xz">.xz</uap:FileType>
+              <uap:FileType>.txz</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".lzma">
+            <uap:DisplayName>LZMA Archive</uap:DisplayName>
+            <uap:Logo>Img\lz.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.lzma</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".tar">
+            <uap:DisplayName>Tape archiver file</uap:DisplayName>
+            <uap:Logo>Img\tar.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/x-tar">.tar</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".cipo">
+            <uap:DisplayName>Copy in, copy out file</uap:DisplayName>
+            <uap:Logo>Img\cpio.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.cipo</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".bz">
+            <uap:DisplayName>BZ File</uap:DisplayName>
+            <uap:Logo>Img\bz.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bz</uap:FileType>
+              <uap:FileType>.bz2</uap:FileType>
+              <uap:FileType>.bzip2</uap:FileType>
+              <uap:FileType>.tbz2</uap:FileType>
+              <uap:FileType>.tbz</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".gz">
+            <uap:DisplayName>GZip File</uap:DisplayName>
+            <uap:Logo>Img\gz.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.gz</uap:FileType>
+              <uap:FileType>.tgz</uap:FileType>
+              <uap:FileType>.gzip</uap:FileType>
+              <uap:FileType>.tpz</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".z">
+            <uap:DisplayName>Z File</uap:DisplayName>
+            <uap:Logo>Img\z.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.z</uap:FileType>
+              <uap:FileType>.taz</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".lzh">
+            <uap:DisplayName>LZH File</uap:DisplayName>
+            <uap:Logo>Img\lzh.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.lzh</uap:FileType>
+              <uap:FileType>.lha</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".rpm">
+            <uap:DisplayName>RPM File</uap:DisplayName>
+            <uap:Logo>Img\rpm.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rpm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".deb">
+            <uap:DisplayName>DEB File</uap:DisplayName>
+            <uap:Logo>Img\deb.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.deb</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".arj">
+            <uap:DisplayName>ARJ File</uap:DisplayName>
+            <uap:Logo>Img\arj.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.arj</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".vhd">
+            <uap:DisplayName>Virtual Hard Disk File</uap:DisplayName>
+            <uap:Logo>Img\vhd.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.vhd</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".wim">
+            <uap:DisplayName>Windows Image Media</uap:DisplayName>
+            <uap:Logo>Img\wim.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.wim</uap:FileType>
+              <uap:FileType>.swm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".fat">
+            <uap:DisplayName>fat File</uap:DisplayName>
+            <uap:Logo>Img\fat.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.fat</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".ntfs">
+            <uap:DisplayName>NTFS File</uap:DisplayName>
+            <uap:Logo>Img\ntfs.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ntfs</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".dmg">
+            <uap:DisplayName>dmg File</uap:DisplayName>
+            <uap:Logo>Img\dmg.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.dmg</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".hfs">
+            <uap:DisplayName>HFS File</uap:DisplayName>
+            <uap:Logo>Img\hfs.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.hfs</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".xar">
+            <uap:DisplayName>xar File</uap:DisplayName>
+            <uap:Logo>Img\Xa.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.xar</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="7zFM.exe">
+          <uap:FileTypeAssociation Name=".squashfs">
+            <uap:DisplayName>squashfs File</uap:DisplayName>
+            <uap:Logo>Img\sq.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.squashfs</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="7z.exe">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="7z.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+        <!-- Implementation of the right click context menu -->
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:SurrogateServer DisplayName="7-Zip">
+              <com:Class Id="23170F69-40C1-278A-1000-000100020000" Path="7-Zip.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+          </com:ComServer>
+        </com:Extension>
+        <desktop9:Extension Category="windows.fileExplorerClassicContextMenuHandler">
+          <desktop9:FileExplorerClassicContextMenuHandler>
+            <desktop9:ExtensionHandler Type="*" Clsid="23170F69-40C1-278A-1000-000100020000"/>
+          </desktop9:FileExplorerClassicContextMenuHandler>
+        </desktop9:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.21301.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

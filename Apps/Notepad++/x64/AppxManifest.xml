@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap rescap uap5 desktop4 com desktop9" xmlns:desktop9="http://schemas.microsoft.com/appx/manifest/desktop/windows10/9" xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="HaukeGtze.NotepadEditor" ProcessorArchitecture="x64" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.8200.4.0"/>
+  <!-- Publisher for Testing: CN=Hauke Gotze, O=Hauke Gotze, S=Schleswig-Holstein, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->  
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource uap:Scale="125"/>
+    <Resource Language="de-DE"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>ms-resource:PublisherDisplayName</PublisherDisplayName>
+    <DisplayName>ms-resource:DisplayName</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe" Id="notepad">
+      <uap:VisualElements AppListEntry="default" BackgroundColor="transparent" Description="ms-resource:VisualElements.Description" DisplayName="ms-resource:VisualElements.DisplayName" Square150x150Logo="Assets\notepadSquare150x150Logo.png" Square44x44Logo="Assets\notepadSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\notepadSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".txt">
+            <uap:DisplayName>ms-resource:DisplayName_1</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.txt</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".as">
+            <uap:DisplayName>ms-resource:DisplayName_2</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.as</uap:FileType>
+              <uap:FileType>.mx</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".ada">
+            <uap:DisplayName>ms-resource:DisplayName_3</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ada</uap:FileType>
+              <uap:FileType>.ads</uap:FileType>
+              <uap:FileType>.adb</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".asm">
+            <uap:DisplayName>ms-resource:DisplayName_4</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.asm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".mib">
+            <uap:DisplayName>ms-resource:DisplayName_5</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mib</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".asp">
+            <uap:DisplayName>ms-resource:DisplayName_6</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.asp</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".au3">
+            <uap:DisplayName>ms-resource:DisplayName_7</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.au3</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".avs">
+            <uap:DisplayName>ms-resource:DisplayName_8</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.avs</uap:FileType>
+              <uap:FileType>.avsi</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".bc">
+            <uap:DisplayName>ms-resource:DisplayName_9</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bc</uap:FileType>
+              <uap:FileType>.cln</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".bash">
+            <uap:DisplayName>ms-resource:DisplayName_10</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bash</uap:FileType>
+              <uap:FileType>.sh</uap:FileType>
+              <uap:FileType>.bsh</uap:FileType>
+              <uap:FileType>.csh</uap:FileType>
+              <uap:FileType>.bash_profile</uap:FileType>
+              <uap:FileType>.profile</uap:FileType>
+              <uap:FileType>.bashrc</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".bat">
+            <uap:DisplayName>ms-resource:DisplayName_11</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.nt</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".bb">
+            <uap:DisplayName>ms-resource:DisplayName_12</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bb</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".c">
+            <uap:DisplayName>ms-resource:DisplayName_13</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.c</uap:FileType>
+              <uap:FileType>.lex</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".ml">
+            <uap:DisplayName>ms-resource:DisplayName_14</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ml</uap:FileType>
+              <uap:FileType>.mli</uap:FileType>
+              <uap:FileType>.sml</uap:FileType>
+              <uap:FileType>.thy</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".cmake">
+            <uap:DisplayName>ms-resource:DisplayName_15</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.cmake</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".cbl">
+            <uap:DisplayName>ms-resource:DisplayName_16</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.cbl</uap:FileType>
+              <uap:FileType>.cbd</uap:FileType>
+              <uap:FileType>.cdb</uap:FileType>
+              <uap:FileType>.cdc</uap:FileType>
+              <uap:FileType>.cob</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".orc">
+            <uap:DisplayName>ms-resource:DisplayName_17</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.orc</uap:FileType>
+              <uap:FileType>.sco</uap:FileType>
+              <uap:FileType>.csd</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".coffee">
+            <uap:DisplayName>ms-resource:DisplayName_18</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.coffee</uap:FileType>
+              <uap:FileType>.litcoffee</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".h">
+            <uap:DisplayName>ms-resource:DisplayName_19</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.h</uap:FileType>
+              <uap:FileType>.hh</uap:FileType>
+              <uap:FileType>.hpp</uap:FileType>
+              <uap:FileType>.hxx</uap:FileType>
+              <uap:FileType>.cpp</uap:FileType>
+              <uap:FileType>.cxx</uap:FileType>
+              <uap:FileType>.cc</uap:FileType>
+              <uap:FileType>.ino</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".cs">
+            <uap:DisplayName>ms-resource:DisplayName_20</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.cs</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".css">
+            <uap:DisplayName>ms-resource:DisplayName_21</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.css</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".d">
+            <uap:DisplayName>ms-resource:DisplayName_22</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.d</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".diff">
+            <uap:DisplayName>ms-resource:DisplayName_23</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.diff</uap:FileType>
+              <uap:FileType>.patch</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".erl">
+            <uap:DisplayName>ms-resource:DisplayName_24</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.erl</uap:FileType>
+              <uap:FileType>.hrl</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".src">
+            <uap:DisplayName>ms-resource:DisplayName_25</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.src</uap:FileType>
+              <uap:FileType>.em</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".forth">
+            <uap:DisplayName>ms-resource:DisplayName_26</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.forth</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".f">
+            <uap:DisplayName>ms-resource:DisplayName_27</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="true" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.f95</uap:FileType>
+              <uap:FileType>.f</uap:FileType>
+              <uap:FileType>.for</uap:FileType>
+              <uap:FileType>.f90</uap:FileType>
+              <uap:FileType>.f2k</uap:FileType>
+              <uap:FileType>.f23</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".f77">
+            <uap:DisplayName>ms-resource:DisplayName_28</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.f77</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".bas">
+            <uap:DisplayName>ms-resource:DisplayName_29</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bas</uap:FileType>
+              <uap:FileType>.bi</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".hs">
+            <uap:DisplayName>ms-resource:DisplayName_30</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.hs</uap:FileType>
+              <uap:FileType>.lhs</uap:FileType>
+              <uap:FileType>.las</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".html">
+            <uap:DisplayName>ms-resource:DisplayName_31</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.htm</uap:FileType>
+              <uap:FileType>.html</uap:FileType>
+              <uap:FileType>.shtml</uap:FileType>
+              <uap:FileType>.shtm</uap:FileType>
+              <uap:FileType>.xhtml</uap:FileType>
+              <uap:FileType>.xht</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".ini">
+            <uap:DisplayName>ms-resource:DisplayName_32</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ini</uap:FileType>
+              <uap:FileType>.wer</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".iss">
+            <uap:DisplayName>ms-resource:DisplayName_33</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.iss</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".hex">
+            <uap:DisplayName>ms-resource:DisplayName_34</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.hex</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".java">
+            <uap:DisplayName>ms-resource:DisplayName_35</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.java</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".js">
+            <uap:DisplayName>ms-resource:DisplayName_36</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.js</uap:FileType>
+              <uap:FileType>.jsm</uap:FileType>
+              <uap:FileType>.jsx</uap:FileType>
+              <uap:FileType>.ts</uap:FileType>
+              <uap:FileType>.tsx</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".json">
+            <uap:DisplayName>ms-resource:DisplayName_37</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.json</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".jsp">
+            <uap:DisplayName>ms-resource:DisplayName_38</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.jsp</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".kix">
+            <uap:DisplayName>ms-resource:DisplayName_39</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.kix</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".lsp">
+            <uap:DisplayName>ms-resource:DisplayName_40</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.lsp</uap:FileType>
+              <uap:FileType>.lisp</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".tex">
+            <uap:DisplayName>ms-resource:DisplayName_41</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.tex</uap:FileType>
+              <uap:FileType>.sty</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".lua">
+            <uap:DisplayName>ms-resource:DisplayName_42</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.lua</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".mak">
+            <uap:DisplayName>ms-resource:DisplayName_43</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mak</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".m">
+            <uap:DisplayName>ms-resource:DisplayName_44</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.m</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".mms">
+            <uap:DisplayName>ms-resource:DisplayName_45</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mms</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".nim">
+            <uap:DisplayName>ms-resource:DisplayName_46</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.nim</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".tab">
+            <uap:DisplayName>ms-resource:DisplayName_47</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.tab</uap:FileType>
+              <uap:FileType>.spf</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".nfo">
+            <uap:DisplayName>ms-resource:DisplayName_48</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.nfo</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".nsi">
+            <uap:DisplayName>ms-resource:DisplayName_49</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.nsi</uap:FileType>
+              <uap:FileType>.nsh</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".osx">
+            <uap:DisplayName>ms-resource:DisplayName_50</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.osx</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".mm">
+            <uap:DisplayName>ms-resource:DisplayName_51</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".pas">
+            <uap:DisplayName>ms-resource:DisplayName_52</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.pas</uap:FileType>
+              <uap:FileType>.pp</uap:FileType>
+              <uap:FileType>.p</uap:FileType>
+              <uap:FileType>.lpr</uap:FileType>
+              <uap:FileType>.inc</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".pl">
+            <uap:DisplayName>ms-resource:DisplayName_53</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.pl</uap:FileType>
+              <uap:FileType>.pm</uap:FileType>
+              <uap:FileType>.plx</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".php">
+            <uap:DisplayName>ms-resource:DisplayName_54</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.php</uap:FileType>
+              <uap:FileType>.php3</uap:FileType>
+              <uap:FileType>.php4</uap:FileType>
+              <uap:FileType>.php5</uap:FileType>
+              <uap:FileType>.phps</uap:FileType>
+              <uap:FileType>.phpt</uap:FileType>
+              <uap:FileType>.phtml</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".ps">
+            <uap:DisplayName>ms-resource:DisplayName_55</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ps</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".ps1">
+            <uap:DisplayName>ms-resource:DisplayName_56</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.psm1</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".properties">
+            <uap:DisplayName>ms-resource:DisplayName_57</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.properties</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".pb">
+            <uap:DisplayName>ms-resource:DisplayName_58</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.pb</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".py">
+            <uap:DisplayName>ms-resource:DisplayName_59</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.py</uap:FileType>
+              <uap:FileType>.pyw</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".r">
+            <uap:DisplayName>ms-resource:DisplayName_60</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r</uap:FileType>
+              <uap:FileType>.s</uap:FileType>
+              <uap:FileType>.splus</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".r2">
+            <uap:DisplayName>ms-resource:DisplayName_61</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.reb</uap:FileType>
+              <uap:FileType>.r2</uap:FileType>
+              <uap:FileType>.r3</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".rc">
+            <uap:DisplayName>ms-resource:DisplayName_62</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rc</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".rb">
+            <uap:DisplayName>ms-resource:DisplayName_63</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rb</uap:FileType>
+              <uap:FileType>.rbw</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".rs">
+            <uap:DisplayName>ms-resource:DisplayName_64</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rs</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".scm">
+            <uap:DisplayName>ms-resource:DisplayName_65</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.scm</uap:FileType>
+              <uap:FileType>.smd</uap:FileType>
+              <uap:FileType>.ss</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".st">
+            <uap:DisplayName>ms-resource:DisplayName_66</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.st</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".scp">
+            <uap:DisplayName>ms-resource:DisplayName_67</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.scp</uap:FileType>
+              <uap:FileType>.out</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".sql">
+            <uap:DisplayName>ms-resource:DisplayName_68</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.sql</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".mot">
+            <uap:DisplayName>ms-resource:DisplayName_69</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mot</uap:FileType>
+              <uap:FileType>.srec</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".swift">
+            <uap:DisplayName>ms-resource:DisplayName_70</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.swift</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".tcl">
+            <uap:DisplayName>ms-resource:DisplayName_71</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.tcl</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".tek">
+            <uap:DisplayName>ms-resource:DisplayName_72</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.tek</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".vb">
+            <uap:DisplayName>ms-resource:DisplayName_73</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.vb</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".t2t">
+            <uap:DisplayName>ms-resource:DisplayName_74</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.t2t</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".v">
+            <uap:DisplayName>ms-resource:DisplayName_75</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.v</uap:FileType>
+              <uap:FileType>.sv</uap:FileType>
+              <uap:FileType>.vh</uap:FileType>
+              <uap:FileType>.svh</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".vhd">
+            <uap:DisplayName>ms-resource:DisplayName_76</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.vhd</uap:FileType>
+              <uap:FileType>.vhdl</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".pro">
+            <uap:DisplayName>ms-resource:DisplayName_77</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.pro</uap:FileType>
+              <uap:FileType>.cl</uap:FileType>
+              <uap:FileType>.i</uap:FileType>
+              <uap:FileType>.pack</uap:FileType>
+              <uap:FileType>.ph</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".xml">
+            <uap:DisplayName>ms-resource:DisplayName_78</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.xml</uap:FileType>
+              <uap:FileType>.xaml</uap:FileType>
+              <uap:FileType>.xsl</uap:FileType>
+              <uap:FileType>.xslt</uap:FileType>
+              <uap:FileType>.xsd</uap:FileType>
+              <uap:FileType>.xul</uap:FileType>
+              <uap:FileType>.kml</uap:FileType>
+              <uap:FileType>.svg</uap:FileType>
+              <uap:FileType>.mxml</uap:FileType>
+              <uap:FileType>.xsml</uap:FileType>
+              <uap:FileType>.wsdl</uap:FileType>
+              <uap:FileType>.xlf</uap:FileType>
+              <uap:FileType>.xliff</uap:FileType>
+              <uap:FileType>.xbl</uap:FileType>
+              <uap:FileType>.sxbl</uap:FileType>
+              <uap:FileType>.sitemap</uap:FileType>
+              <uap:FileType>.gml</uap:FileType>
+              <uap:FileType>.gpx</uap:FileType>
+              <uap:FileType>.plist</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap:FileTypeAssociation Name=".yml">
+            <uap:DisplayName>ms-resource:DisplayName_79</uap:DisplayName>
+            <uap:Logo>64x64icon.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.yml</uap:FileType>
+              <uap:FileType>.yaml</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="Notepad++_.exe">
+          <uap5:AppExecutionAlias>
+            <uap5:ExecutionAlias Alias="notepad++.exe"/>
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+    <com:Extension Category="windows.comServer">
+  <com:ComServer>
+    <com:SurrogateServer DisplayName="ANotepad">
+      <com:Class Id="B298D29A-A6ED-11DE-BA8C-A68E55D89593" Path="NppShell_06.dll" ThreadingModel="STA"/>
+    </com:SurrogateServer>
+  </com:ComServer>
+</com:Extension>
+<desktop9:Extension Category="windows.fileExplorerClassicContextMenuHandler">
+    <desktop9:FileExplorerClassicContextMenuHandler>
+        <desktop9:ExtensionHandler Type="*" Clsid="B298D29A-A6ED-11DE-BA8C-A68E55D89593" />
+    </desktop9:FileExplorerClassicContextMenuHandler>
+</desktop9:Extension>
+       <!-- <desktop4:Extension Category="windows.fileExplorerContextMenus">
+  <desktop4:FileExplorerContextMenus>
+    <desktop5:ItemType Type="*">
+      <desktop5:Verb Id="Command1" Clsid="B298D29A-A6ED-11DE-BA8C-A68E55D89593" />
+    </desktop5:ItemType>
+  </desktop4:FileExplorerContextMenus>
+</desktop4:Extension-->
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.21301.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <Extensions>
+
+    <!--Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>NppShell_06.dll</Path>
+        <ActivatableClass ActivatableClassId="B298D29A-A6ED-11DE-BA8C-A68E55D89593" ThreadingModel="both">
+          <ActivatableClassAttribute Name="Title" Type="string" Value="&amp;Edit with Notepad++"/>
+          <ActivatableClassAttribute Name="ShowIcon" Type="integer" Value="1"/>
+          <ActivatableClassAttribute Name="MaxText" Type="integer" Value="25"/>
+          <ActivatableClassAttribute Name="Dynamic" Type="integer" Value="1"/>
+        </ActivatableClass>
+</InProcessServer>
+</Extension-->
+  </Extensions>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.476"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

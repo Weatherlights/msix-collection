@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap rescap rescap3 desktop uap3" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10">
+  <Identity Name="HaukeGtze.PasswordSafepoweredbyweatherlights.com" ProcessorArchitecture="x64" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.358.1.0"/>
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource uap:Scale="200"/>
+    <Resource Language="en-us"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>Password Safe powered by weatherlights.com</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe" Id="pwsafe.exe">
+      <uap:VisualElements BackgroundColor="transparent" Description="Password Safe" DisplayName="Password Safe" Square150x150Logo="Assets\pwsafe.exeSquare150x150Logo.png" Square44x44Logo="Assets\pwsafe.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\pwsafe.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Password Safe powered by weatherlights.com\pwsafe.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Password Safe powered by weatherlights.com\pwsafe.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".psafe3">
+            <uap:DisplayName>Password Safe Database</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="true" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.psafe3</uap:FileType>
+              <uap:FileType>.psafe4</uap:FileType>
+              <uap:FileType>.dat</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".bak">
+            <uap:DisplayName>Password Safe Backups</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bak</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".ibak">
+            <uap:DisplayName>Password Safe Intermediate Backups</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ibak</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <desktop:Extension Category="windows.startupTask" EntryPoint="Windows.FullTrustApplication" Executable="autostart.exe">
+          <desktop:StartupTask Enabled="true" TaskId="pwsafe.exe"/>
+        </desktop:Extension>
+        <uap3:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe-cli.exe">
+          <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="pwsafe-cli.exe"/>
+          </uap3:AppExecutionAlias>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="WCOMWrapper" Version="1.0"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

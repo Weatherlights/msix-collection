@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Copyright (c) 2020 Hauke Götze <hauke@hauke.us>
+All rights reserved. Use of the code is allowed under the 
+Artistic License 2.0 terms, as specified in the LICENSE file
+distributed with this code, or available from
+http://www.opensource.org/licenses/artistic-license-2.0.php
+
+This file is used to create an MSIX/APPX package to install
+Password Safe as an Universal Windows Plattform application.
+To build the package you require the Windows 10 SDK available
+from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
+ -->
+<Package IgnorableNamespaces="build uap rescap rescap3 desktop uap3" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10">  
+
+<!--
+  Change the Identity according to your needs or as required by Microsoft if you intend to publish your build.
+  For internal publishing the Publisher should match the subject of your code signing certificate.
+-->  
+  <Identity
+    Name="HaukeGtze.PasswordSafepoweredbyweatherlights.com"
+    ProcessorArchitecture="x86"
+    Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414"
+    Version="1.358.1.0"/>
+  
+  <!-- Publisher for Testing: CN=Hauke Hasselberg, OU=weatherlights.com, O=Hauke Hasselberg, POBox=24536, STREET=Kieler Strasse 242, L=Neumünster, S=Schleswig-Holstein, PostalCode=24536, C=DE -->
+  <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource uap:Scale="200"/>
+    <Resource Language="en-us"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Hauke Hasselberg</PublisherDisplayName>
+    <DisplayName>Password Safe powered by weatherlights.com</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+  <!-- The pwsafe_.exe is a wrapper used only for the store submission. The application shows a privacy policy and then starts the original pwsafe.exe -->
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe" Id="pwsafe.exe">
+      <uap:VisualElements BackgroundColor="transparent" Description="Password Safe" DisplayName="Password Safe" Square150x150Logo="Assets\pwsafe.exeSquare150x150Logo.png" Square44x44Logo="Assets\pwsafe.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\pwsafe.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Password Safe powered by weatherlights.com\pwsafe.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Password Safe powered by weatherlights.com\pwsafe.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <!-- Associate Password Safe with psafe3, psafe4 and dat files -->
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".psafe3">
+            <uap:DisplayName>Password Safe Database</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="true" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.psafe3</uap:FileType>
+              <uap:FileType>.psafe4</uap:FileType>
+              <uap:FileType>.dat</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <!-- Associate Password Safe with bak files -->
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".bak">
+            <uap:DisplayName>Password Safe Backups</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.bak</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <!-- Associate Password Safe with ibak files -->
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe_.exe">
+          <uap:FileTypeAssociation Name=".ibak">
+            <uap:DisplayName>Password Safe Intermediate Backups</uap:DisplayName>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false"/>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.ibak</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <!-- Register Password Safe to the Windows Autostart. The autostart.exe is a wrapper application that runs pwsafe.exe silent. -->
+        <desktop:Extension Category="windows.startupTask" EntryPoint="Windows.FullTrustApplication" Executable="autostart.exe">
+          <desktop:StartupTask Enabled="true" TaskId="pwsafe.exe"/>
+        </desktop:Extension>
+        <!-- Make the pwsafe command line utility available to the CMD/Powershell. This is similar to adding the installation directory to the PATH variable. -->
+        <uap3:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="pwsafe-cli.exe">
+          <uap3:AppExecutionAlias>
+            <desktop:ExecutionAlias Alias="pwsafe-cli.exe"/>
+          </uap3:AppExecutionAlias>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.530"/>
+    <build:Item Name="WCOMWrapper" Version="1.0"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>

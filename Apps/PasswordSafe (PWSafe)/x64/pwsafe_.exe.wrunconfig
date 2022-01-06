@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <Process>
+    <Filename>[APPDIR]\pwsafe.exe</Filename>
+    <WorkingDirectory></WorkingDirectory>
+    <Arguments>[ARGS]</Arguments>
+  </Process>
+  <PrivacyPolicy>
+    <Message lang="de" Caption="Datenschutzerklärung" DoNotShowAgainText="Diese Meldung nicht erneut anzeigen.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_de.html</Message>
+    <Message lang="default" Caption="Privacy Policy" DoNotShowAgainText="Do not show this message again.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_en.html</Message>
+  </PrivacyPolicy>
+</config>

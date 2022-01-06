@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) 2020 Hauke Götze <hauke@hauke.us>
+All rights reserved. Use of the code is allowed under the 
+Artistic License 2.0 terms, as specified in the LICENSE file
+distributed with this code, or available from
+http://www.opensource.org/licenses/artistic-license-2.0.php
+
+This file is used to configure the pwsafe_.exe wrapper application.
+It displays a browser window showing a privacy policy file and then
+runs pwsafe.exe. The display of a privacy policy is required by
+the Microsoft Store. You do not need to display a privacy policy
+if you do not intend to publish this to the Microsoft Store or if you
+integrate the privacy policy into the pwsafe.exe file.
+ -->
+<config>
+  <Process>
+    <Filename>[APPDIR]\pwsafe.exe</Filename>
+    <WorkingDirectory/>
+    <Arguments>[ARGS]</Arguments>
+  </Process>
+  <!-- If you like to show your own privacy policy just modify these lines accordingly. You can add additional languages by adding a new line and providing the 2 digit country code. -->
+  <PrivacyPolicy>
+    <Message lang="de" Caption="Datenschutzerklärung" DoNotShowAgainText="Diese Meldung nicht erneut anzeigen.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_de.html</Message>
+    <Message lang="default" Caption="Privacy Policy" DoNotShowAgainText="Do not show this message again.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_en.html</Message>
+  </PrivacyPolicy>
+</config>

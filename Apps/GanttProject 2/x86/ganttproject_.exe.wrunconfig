@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <Process>
+    <Filename>[APPDIR]\bin\javaw.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>-Xmx512m -Dsun.java2d.d3d=false -Duser.home="[APPDATA]" -classpath .\eclipsito.jar -ea org.bardsoftware.eclipsito.Boot -plugins-dir plugins -app net.sourceforge.ganttproject.GanttProject [ARGS]</Arguments>
+  </Process>
+  <PrivacyPolicy>
+    <Message lang="de" Caption="Datenschutzerklärung" DoNotShowAgainText="Diese Meldung nicht erneut anzeigen.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_de.html</Message>
+    <Message lang="default" Caption="Privacy Policy" DoNotShowAgainText="Do not show this message again.">https://storeprivacypolicy.azurewebsites.net/generic/Privacy_en.html</Message>
+  </PrivacyPolicy>
+</config>

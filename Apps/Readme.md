@@ -1,0 +1,1 @@
+Each folder contains the payload of an app. Unless stated otherwise you just need to place the binaries from the programm files folder into a folder and use the Packing.ps1 script to build the MSIX/APPX file.

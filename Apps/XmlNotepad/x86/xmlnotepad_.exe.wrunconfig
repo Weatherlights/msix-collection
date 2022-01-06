@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Process>
+    <Filename>[APPDIR]\XmlNotepad.exe</Filename>
+    <WorkingDirectory>[APPDIR]</WorkingDirectory>
+    <Arguments>[ARGS]</Arguments>
+  </Process>
+  <VirtualFolder>
+    <Folder>[APPDIR]\VFS\LocalAppData\Microsoft\XML Notepad</Folder>
+    <Target>[LOCALAPPDATA]\Microsoft\XML Notepad</Target>
+  </VirtualFolder>
+</config>

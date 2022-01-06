@@ -1,0 +1,49 @@
+﻿<Settings>
+  <FindMode>False</FindMode>
+  <IndentLevel>2</IndentLevel>
+  <SchemaCache />
+  <WindowBounds>234; 234; 752; 563</WindowBounds>
+  <Language />
+  <NewLineChars>\r\n</NewLineChars>
+  <XmlDiffIgnoreComments>False</XmlDiffIgnoreComments>
+  <XmlDiffIgnorePI>False</XmlDiffIgnorePI>
+  <AutoFormatLongLines>False</AutoFormatLongLines>
+  <NoByteOrderMark>False</NoByteOrderMark>
+  <TreeViewSize>200</TreeViewSize>
+  <MaximumValueLength>0</MaximumValueLength>
+  <XmlDiffIgnoreXmlDecl>False</XmlDiffIgnoreXmlDecl>
+  <UpdateEnabled>False</UpdateEnabled>
+  <AppRegistered>False</AppRegistered>
+  <FileName>/</FileName>
+  <SearchWholeWord>False</SearchWholeWord>
+  <RecentFiles />
+  <SearchRegex>False</SearchRegex>
+  <SearchSize>0; 0</SearchSize>
+  <Font>Microsoft Sans Serif; 8,25pt</Font>
+  <XmlDiffIgnoreNamespaces>False</XmlDiffIgnoreNamespaces>
+  <IgnoreDTD>False</IgnoreDTD>
+  <IndentChar>Space</IndentChar>
+  <XmlDiffIgnoreChildOrder>False</XmlDiffIgnoreChildOrder>
+  <AutoFormatOnSave>True</AutoFormatOnSave>
+  <UpdateFrequency>1.00:00:00</UpdateFrequency>
+  <SearchXPath>False</SearchXPath>
+  <XmlDiffIgnorePrefixes>False</XmlDiffIgnorePrefixes>
+  <TaskListSize>90</TaskListSize>
+  <LastUpdateCheck>04.01.2020 18:59</LastUpdateCheck>
+  <Colors>
+    <PI>Purple</PI>
+    <ContainerBackground>AliceBlue</ContainerBackground>
+    <Element>0; 64; 128</Element>
+    <Attribute>Maroon</Attribute>
+    <Comment>Green</Comment>
+    <Background>White</Background>
+    <CDATA>Gray</CDATA>
+    <Text>Black</Text>
+  </Colors>
+  <SearchMatchCase>False</SearchMatchCase>
+  <XmlDiffIgnoreDtd>False</XmlDiffIgnoreDtd>
+  <SearchWindowLocation>0; 0</SearchWindowLocation>
+  <MaximumLineLength>10000</MaximumLineLength>
+  <XmlDiffIgnoreWhitespace>False</XmlDiffIgnoreWhitespace>
+  <UpdateLocation>http://www.lovettsoftware.com/downloads/xmlnotepad/Updates.xml</UpdateLocation>
+</Settings>

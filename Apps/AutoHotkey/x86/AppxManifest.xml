@@ -20,7 +20,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
     Name="HaukeGtze.AutoHotkeypoweredbyweatherlights.com"
     ProcessorArchitecture="x86"
     Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414"
-    Version="1.1133.103.0"/>
+    Version="1.1133.104.0"/>
   <!-- Publisher for Testing: CN=Hauke Gotze, OU=weatherlights.com, O=Hauke Gotze, S=Schleswig-Holstein, C=DE -->
   <!-- Publisher for Release: CN=BFF8D712-89E6-4205-9504-3AB824A94414 -->  
   <Resources>
@@ -38,7 +38,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
   <Applications>
   <!-- The main shortcut just opens the documentation from the website (instead of running AutoHotkey.exe). This is needed since CHM files will not run on Windows 10 in S-Mode. -->
     <Application Executable="autohotkey_.exe" EntryPoint="Windows.FullTrustApplication" Id="AutoHotkey.exe" desktop4:SupportsMultipleInstances="true">
-      <uap:VisualElements BackgroundColor="#418c41" Description="Get started with AutoHotkey" DisplayName="AutoHotkey" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
+      <uap3:VisualElements VisualGroup="AutoHotkey" BackgroundColor="#418c41" Description="Get started with AutoHotkey" DisplayName="AutoHotkey" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscape"/>
@@ -48,7 +48,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
             <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-      </uap:VisualElements>
+      </uap3:VisualElements>
       <Extensions>
         <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkey.exe">
           <rescap3:DesktopAppMigration>
@@ -83,7 +83,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
       </Extensions>
     </Application>
     <Application EntryPoint="Windows.FullTrustApplication" Executable="Compiler\Ahk2Exe.exe" Id="Ahk2Exe.exe" desktop4:SupportsMultipleInstances="true">
-      <uap:VisualElements BackgroundColor="#418c41" Description="Convert an AutoHotkey Script (.ahk) to an executable binary file (.exe)" DisplayName="Convert .ahk to .exe" Square150x150Logo="Assets\Ahk2Exe.exeSquare150x150Logo.png" Square44x44Logo="Assets\Ahk2Exe.exeSquare44x44Logo.png">
+      <uap3:VisualElements VisualGroup="AutoHotkey" BackgroundColor="#418c41" Description="Convert an AutoHotkey Script (.ahk) to an executable binary file (.exe)" DisplayName="Convert .ahk to .exe" Square150x150Logo="Assets\Ahk2Exe.exeSquare150x150Logo.png" Square44x44Logo="Assets\Ahk2Exe.exeSquare44x44Logo.png">
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscape"/>
@@ -93,7 +93,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
             <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-      </uap:VisualElements>
+      </uap3:VisualElements>
       <Extensions>
         <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="Compiler\Ahk2Exe.exe">
           <rescap3:DesktopAppMigration>
@@ -110,7 +110,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
     </Application>
     <!-- WindowSpy is an AHK file which is run by the Autohotkey.exe file. Since arguments are not supported within MSIX the windowspy_.exe wrapper runs the Autohotkey.exe with WindowsSpy.ahk file as the first argument. Check the windowspy_.exe.wronconfig file for further details -->
     <Application EntryPoint="Windows.FullTrustApplication" Executable="windowspy_.exe" Id="AutoHotkey.exe1" desktop4:SupportsMultipleInstances="true">
-      <uap:VisualElements BackgroundColor="#418c41" Description="Starts Window Spy" DisplayName="Window Spy" Square150x150Logo="Assets\AutoHotkey.exe1Square150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exe1Square44x44Logo.png">
+      <uap3:VisualElements VisualGroup="AutoHotkey" BackgroundColor="#418c41" Description="Starts Window Spy" DisplayName="Window Spy" Square150x150Logo="Assets\AutoHotkey.exe1Square150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exe1Square44x44Logo.png">
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscape"/>
@@ -120,10 +120,10 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
             <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-      </uap:VisualElements>
+      </uap3:VisualElements>
     </Application>
     <Application EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkeyA32_.exe" Id="AutoHotkeyA32.exe" desktop4:SupportsMultipleInstances="true">
-      <uap:VisualElements BackgroundColor="#418c41" Description="Get started with AutoHotkey ANSI. Run AutoHotkeyA32.exe from the command prompt." DisplayName="AutoHotkey (ANSI)" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
+      <uap3:VisualElements VisualGroup="AutoHotkey" BackgroundColor="#418c41" Description="Get started with AutoHotkey ANSI. Run AutoHotkeyA32.exe from the command prompt." DisplayName="AutoHotkey (ANSI)" Square150x150Logo="Assets\AutoHotkey.exeSquare150x150Logo.png" Square44x44Logo="Assets\AutoHotkey.exeSquare44x44Logo.png">
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscape"/>
@@ -133,7 +133,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
             <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-      </uap:VisualElements>
+      </uap3:VisualElements>
       <Extensions>
         <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="AutoHotkeyA32_.exe">
           <rescap3:DesktopAppMigration>
@@ -150,7 +150,7 @@ from https://developer.microsoft.com/de-de/windows/downloads/windows-10-sdk/
     </Application>
   </Applications>
   <Dependencies>
-    <TargetDeviceFamily MaxVersionTested="10.0.18362.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+    <TargetDeviceFamily MaxVersionTested="10.0.19044.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
   </Dependencies>
   <build:Metadata>
     <build:Item Name="OperatingSystem" Version="10.0.18362.718"/>

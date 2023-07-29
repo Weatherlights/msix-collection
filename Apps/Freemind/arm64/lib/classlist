@@ -208,8 +208,8 @@ java/lang/ref/Reference$1
 java/lang/ref/Finalizer$FinalizerThread
 jdk/internal/access/JavaLangAccess
 java/lang/System$2
-jdk/internal/misc/VM
 jdk/internal/util/SystemProps
+jdk/internal/misc/VM
 jdk/internal/util/SystemProps$Raw
 java/lang/StringConcatHelper
 java/lang/VersionProps
@@ -379,6 +379,7 @@ jdk/internal/module/SystemModuleFinders$3
 jdk/internal/module/SystemModuleFinders$SystemModuleFinder
 jdk/internal/loader/BootLoader
 jdk/internal/loader/NativeLibraries
+jdk/internal/loader/ClassLoaderHelper
 java/util/Queue
 java/util/Deque
 java/util/ArrayDeque
@@ -466,6 +467,7 @@ java/lang/invoke/MethodHandleImpl$Intrinsic
 java/lang/Readable
 java/nio/CharBuffer
 java/nio/HeapCharBuffer
+java/lang/StringCoding
 java/nio/charset/CoderResult
 @lambda-form-invoker [LF_RESOLVE] java.lang.invoke.DirectMethodHandle$Holder invokeStatic L7_L
 java/lang/Module$ReflectionData
@@ -672,7 +674,6 @@ sun/nio/fs/NativeBuffer
 sun/nio/fs/NativeBuffer$Deallocator
 sun/nio/fs/WindowsNativeDispatcher
 jdk/internal/loader/NativeLibraries$LibraryPaths
-jdk/internal/loader/ClassLoaderHelper
 jdk/internal/loader/NativeLibraries$1
 java/util/ArrayDeque$DeqIterator
 jdk/internal/loader/NativeLibrary
@@ -709,7 +710,6 @@ java/util/Locale
 sun/util/locale/BaseLocale
 sun/util/locale/LocaleUtils
 jdk/internal/perf/PerfCounter$CoreCounters
-java/lang/StringCoding
 java/util/zip/ZipEntry
 java/util/jar/JarEntry
 java/util/jar/JarFile$JarFileEntry
@@ -849,6 +849,9 @@ java/lang/NamedPackage
 java/lang/Package
 java/lang/Package$VersionInfo
 sun/nio/ByteBuffered
+java/util/zip/Checksum
+java/util/zip/CRC32
+java/util/zip/Checksum$1
 java/security/SecureClassLoader$CodeSourceKey
 java/security/SecureClassLoader$1
 java/security/PermissionCollection
@@ -892,6 +895,11 @@ java/security/Security$1
 java/util/Properties$LineReader
 java/util/concurrent/ConcurrentHashMap$ForwardingNode
 java/io/FileInputStream$1
+java/util/concurrent/ConcurrentHashMap$EntrySetView
+java/util/concurrent/ConcurrentHashMap$EntryIterator
+java/util/concurrent/ConcurrentHashMap$MapEntry
+jdk/internal/access/JavaSecurityPropertiesAccess
+java/security/Security$2
 java/io/FilePermission
 java/lang/System$LoggerFinder
 jdk/internal/logger/DefaultLoggerFinder
@@ -915,11 +923,8 @@ java/util/concurrent/ConcurrentHashMap$KeySetView
 java/util/Collections$3
 java/util/concurrent/ConcurrentHashMap$KeyIterator
 java/util/Properties$EntrySet
-java/util/concurrent/ConcurrentHashMap$EntrySetView
 java/util/Collections$SynchronizedCollection
 java/util/Collections$SynchronizedSet
-java/util/concurrent/ConcurrentHashMap$EntryIterator
-java/util/concurrent/ConcurrentHashMap$MapEntry
 java/util/Hashtable$Enumerator
 @lambda-proxy java/util/logging/Level apply ()Ljava/util/function/Function; (Ljava/lang/Object;)Ljava/lang/Object; REF_invokeVirtual java/util/logging/Level$KnownLevel mirrored ()Ljava/util/Optional; (Ljava/util/logging/Level$KnownLevel;)Ljava/util/Optional;
 java/util/ArrayList$ArrayListSpliterator
@@ -1286,6 +1291,7 @@ sun/util/locale/provider/CalendarProviderImpl
 java/util/Calendar$Builder
 java/util/GregorianCalendar
 sun/util/calendar/CalendarSystem
+sun/util/calendar/CalendarSystem$GregorianHolder
 sun/util/calendar/AbstractCalendar
 sun/util/calendar/BaseCalendar
 sun/util/calendar/Gregorian

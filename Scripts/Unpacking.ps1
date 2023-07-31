@@ -1,9 +1,9 @@
 ﻿param(
-    $File = "C:\Users\hauke\downloads\npp.msix",
-    $OutFolder = "C:\Users\hauke\Downloads\mynppx86"
+    $File = "C:\Users\hauke\OneDrive - weatherlights.com\Temp\Shared Downloads\indm.appx",
+    $OutFolder = "C:\Users\hauke\Downloads\indm"
 );
 
-$sdkfolder = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64";
+$sdkfolder = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64";
 $MakeAppxEXE = "$sdkfolder\MakeAppx.exe"
 $extension = ($File -split "\.")[($File -split "\.").Count-1]
 

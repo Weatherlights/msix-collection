@@ -4,7 +4,7 @@
     $SignFile = $true
 );
 
-$sdkfolder = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64";
+$sdkfolder = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64";
 $MakeAppxEXE = "$sdkfolder\MakeAppx.exe"
 $SignTool = "$sdkfolder\SignTool.exe"
 $MakePri = "$sdkfolder\MakePri.exe"
